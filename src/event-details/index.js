@@ -56,12 +56,14 @@ function EventDetails({ event, fetchData, isCreateForm }) {
     if (minute < 10) {
         minute = `0${minute}`;
     }
-    if (hour === 0) {
-        hour = 12;
-    }
-    if (hour > 11) {
+    if (hour > 12) {
         displayTime = `${hour - 12}:${minute}PM`;
+    } else if (hour === 12) {
+        displayTime = `${hour}:${minute}PM`;
     } else {
+        if (hour === 0) {
+            hour = 12;
+        }
         displayTime = `${hour}:${minute}AM`;
     }
     return displayTime;
