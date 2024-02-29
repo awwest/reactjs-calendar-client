@@ -1,10 +1,12 @@
 import React from "react";
+import EventDetails from "../event-details";
 
-class Day extends React.Component {
-    render() {
-        let index = this.props.dayNum;
-        return (<li key={index}>{index}...</li>)
-    }
+function Day({ eventList, fetchData }) {
+    const events = eventList || [];
+    
+    return events.length ? events.map((item) => {
+        return <EventDetails event={item} fetchData={fetchData}></EventDetails>
+    }) : <p>No events for this date</p>;
 }
 
 export default Day;

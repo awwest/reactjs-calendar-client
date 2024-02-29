@@ -1,38 +1,65 @@
+input {
+  border: 1px solid black;
+  background: lightgray;
+  height: 1.3em;
+  margin: 1em;
+  display: inline-block;
+  padding: 1em;
+}
+
 .App {
   text-align: center;
+  background-color: beige;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.event-item {
+  border: 1px solid black;
+  background: lightgray;
+  margin: 1em;
+  padding: 1em;
+  width: 90%;
+  transition: all 0.5s ease-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.event-item form {
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .event-item {
+    display: inline-flex;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media (max-width: 899px) {
+  .event-item {
+    display: inline-block;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.event-item span, .event-item div {
+  margin: 1em;
+  border: 1px solid gray;
+  padding: 1em;
+  background-color: lightsteelblue;
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.react-calendar {
+  display: inline-block;
+}
+
+button {
+  padding: 0 1em;
+  font-size: 1.1em;
+  background-color: yellowgreen;
+  border-radius: 10px;
+}
+
+button.cancel-button {
+  background-color: gray;
+}
+
+button.delete-button {
+  background-color: red;
 }
