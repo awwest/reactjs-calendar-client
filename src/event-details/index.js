@@ -59,7 +59,7 @@ function EventDetails({ event, fetchData, isCreateForm }) {
     if (hour === 0) {
         hour = 12;
     }
-    if (hour > 12) {
+    if (hour > 11) {
         displayTime = `${hour - 12}:${minute}PM`;
     } else {
         displayTime = `${hour}:${minute}AM`;
