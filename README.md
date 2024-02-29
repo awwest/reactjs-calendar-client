@@ -1,6 +1,38 @@
-# Getting Started with Create React App
+## Description
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+A basic Calendar application using NestJS, Mongoose, and React.
+
+The code for this application is split into two repos, one for the server and one for the client. Each repo will need to be downloaded to the same containing directory, so that client and server directories are siblings.
+
+From the parent directory, run
+
+```bash
+$ cd client
+$ npm install
+$ npm run build
+$ cd ../server
+$ npm install
+$ npm run start
+```
+
+Changes to the React application will not show up until it is built, as NestJS is serving the build file. Running the React application in development mode will not connect to the server.
+
+This application does not yet feature user authentication, so it only provides support for one global user. Authentication with JSON Web Tokens and Passport is planned to support multiple users.
+
+Event notifications are mocked, and are currently mocked as email messages. Invites are not currently handled. Push notifications using the Push API with service workers are next for notifications.
+
+Component styles are a work in progress, meant to be updated with a UI library.
+
+Date formatting is implemented in an ad hoc manner in React. A better approach would have been to use Moment.js to achieve consistent date/time formats. 
+
+Types on the client side should be updated for more confidence in data handling.
+
+Development work would be eased if React development mode were configured to run along with the NestJS server, rather than requiring a build for each change.
+
+Test coverage is not comprehensive.
+
 
 ## Available Scripts
 
@@ -28,43 +60,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
