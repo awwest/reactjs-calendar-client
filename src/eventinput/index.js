@@ -16,19 +16,19 @@ function EventInput({ updateEvent, fetchData, currentDate }) {
 
     return (
         <div>
-            <div>Select Date:</div>
-            <input
-            type='date'
-            value={currentDate}
-            onChange={dateSelected}
-            ></input>
             <p>Create new event:</p>
             <EventDetails 
                 event={{ date: selectedDate }}
                 fetchData={fetchData}
                 isCreateForm={true}
             ></EventDetails>
-        </div>
+            <div>Select Date:</div>
+                <input
+                type='date'
+                value={currentDate}
+                onChange={dateSelected}
+                ></input>
+            </div>
         )
 }
 
