@@ -32,7 +32,6 @@ function EventDetails({ event, fetchData, isCreateForm }) {
     if (window.confirm(`Are you sure you want to delete ${event.name}?`)) {
         axios.delete(`${apiUrl}/${event._id}`).then((response)=> {
             fetchData();
-            setEditing(false);
         });
     }
   }
@@ -170,8 +169,8 @@ function EventDetails({ event, fetchData, isCreateForm }) {
                     </span>
                     <p className="button-group">
                         <button type="submit">Save</button>
-                        {isCreateForm ? '' : (<button className="cancel-button" onClick={cancelEditing}>Cancel</button>)}
-                        { event._id ? (<button className="delete-button" onClick={deleteItem}>Delete</button>) : "" }
+                        {isCreateForm ? '' : (<button className="cancel-button" type="button" onClick={cancelEditing}>Cancel</button>)}
+                        { event._id ? (<button className="delete-button" type="button" onClick={deleteItem}>Delete</button>) : "" }
                     </p>
                 </form>
             </div>
