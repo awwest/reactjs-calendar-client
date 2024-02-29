@@ -152,7 +152,7 @@ function EventDetails({ event, fetchData, isCreateForm }) {
                     ></input>
                     </span>
                     <span>
-                    <label htmlFor="description">description:</label>
+                    <label htmlFor="description">Description:</label>
                     <input 
                         id="description" 
                         name="description"
